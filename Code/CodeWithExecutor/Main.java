@@ -12,7 +12,7 @@ public class Main{
         listOfNumbers[i] = i;
       }
       int listOfNumbersSize = listOfNumbers.length;
-      int stagesSize = (int)(Math.ceil( Math.log(listOfNumbersSize) / Math.log(2)+1e-10))+1;
+      int stagesSize = (int)(Math.ceil( Math.log(listOfNumbersSize) / Math.log(2)))+1;
       long result = 0;
       long [][] stages = new long [stagesSize][listOfNumbersSize];
       initializeFirstStage(stages, listOfNumbers, listOfNumbersSize);
