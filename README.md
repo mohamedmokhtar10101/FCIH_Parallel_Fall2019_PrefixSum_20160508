@@ -23,8 +23,9 @@ out[0] := 0
 for k := 1 to n do
   out[k] := in[k-1] + out[k-1]
 ```
-### Parallel Algorithm:
-> The Algorithm is simply divided into **Stages** , ***which by the way it's size is: log2(N) : N => Size of the Array***, The first **Stage** always contain the actual array that is going to be summed.
+#### Parallel Algorithm:
+![The Algorithm](References for algorithms/parallel_Hillis_Stelle.png)
+> The Algorithm is simply divided into **Stages** , ***which by the way it's size is: log2(N) : N => Size of the Array***, The first **Stage** always contain the actual array that is going to be summed.\
 To get each ***element*** in the other **Stages**, you have to sum (the current ***element*** from the previous **Stage**, which it's index is the same as the current index) by (the ***element*** from the previous **Stage**, which it's index is 2-(the current index)^2).
 **IF** the index of ***element*** is *less* than (2 - (the current index)^2), it will equal the ***Previous element*** from the ***Previous Stage*** with the same **Index**.
 ```sh
